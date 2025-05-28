@@ -1,0 +1,297 @@
+/**********************************************/
+/*****  css/utilities/utility-classes.css  ****/
+/*********************************************/
+
+/* Visibility */
+.hidden { display: none !important;}
+.visible { visibility: visible !important; }
+.invisible { visibility: hidden !important; }
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* Breakpoints */
+.mobile, .hidden-desktop {
+	@media (min-width: 768px) { display: none !important; }
+}
+.desktop, .hidden-desktop {
+	@media (max-width: 768px) {
+		display: none !important; }
+}
+
+/******* Styles *******/
+
+.dashed, [class$='-dashed'] { border-style: dashed !important; }
+.corner, .corners { border-radius: .5rem; }
+.corner-l, .corners-l { border-radius: 1rem; }
+.border { border: 2px solid #333; }
+
+/* Typography */
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-left { text-align: left; }
+.uppercase { text-transform: uppercase; }
+.lowercase { text-transform: lowercase; }
+.capitalize { text-transform: capitalize; }
+.underline { text-decoration: underline; }
+.bold { font-weight: bold; }
+.italic { font-style: italic; }
+
+
+
+
+/******* Layouts *******/
+
+.block { display: block; }
+.inline { display: inline; }
+.inline-block { display: inline-block; }
+.margin-auto { margin-inline: auto; }
+
+
+/* Flexbox */
+.flex { display: flex; }
+.flex.row { flex-direction: row; }
+.flex.column { flex-direction: column; }
+.flex.row.reverse { flex-direction: row-reverse; }
+.flex.column.reverse { flex-direction: column-reverse; }
+.grow { flex-grow: 1; };
+.shrink { flex-shrink: 1; };
+
+/* Flex Stacking */
+.flex.stack { flex-direction: row; }
+@media (max-width: 678px) {
+	.flex.stack { flex-direction: column; }
+	.flex.stack.reverse { flex-direction: column-reverse; }
+}
+
+/* Flex alignment */
+.flex.center { justify-content: center; }
+.flex.space-between { justify-content: space-between; }
+.flex.middle { align-items: center; }
+.flex.wrap { flex-wrap: wrap; }
+.flex.nowrap { flex-wrap: nowrap; }
+.flex.align-start {align-items: flex-start;}
+.flex.align-end {align-items: flex-end;}
+
+
+/* Grid */
+.grid { display: grid; }
+.grid.center { place-items: center; }
+/* Columns */ @media (min-width: 1px) { 
+	.grid.cols-auto {grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));}
+	.grid.cols-1 { grid-template-columns: 1fr; }
+	.grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+	.grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+	.grid.cols-4 { grid-template-columns: repeat(4, 1fr); }
+	.grid.cols-5 { grid-template-columns: repeat(5, 1fr); }
+	.grid.cols-6 { grid-template-columns: repeat(6, 1fr); }
+	.grid.cols-7 { grid-template-columns: repeat(7, 1fr); }
+	.grid.cols-8 { grid-template-columns: repeat(8, 1fr); }
+} 
+.grid.space-between { align-content: space-between; }
+
+:root {
+--gap-xxs: .25rem;
+--gap-xs: .5rem;
+--gap-s: 1rem;
+--gap: 1.5rem;
+--gap-m: 2rem;
+--gap-l: 3rem;
+--gap-xl: 3.75rem;
+--gap-xxl: 7.5rem;
+}
+/* Gaps */
+.gap-xxs { gap: var(--gap-xxs);}
+.gap-xs { gap: var(--gap-xs);}
+.gap-s { gap: var(--gap-s);}
+.gap { gap: var(--gap);}
+.gap-m { gap: var(--gap-m);}
+.gap-l { gap: var(--gap-l);}
+.gap-xl { gap: var(--gap-xl);}
+.gap-xxl { gap: var(--gap-xxl);}
+gap {all: unset; display: block; height: var(--gap);} /* For this one you can just use <gap></gap> and it will give you a quick lil vertical gap. */
+
+/* Padding - Expand to see classes*/
+@media (min-width: 1px) {
+	.pad-xs {padding: var(--gap-xs);}
+	.pad-s {padding: var(--gap-s);}
+	.pad {padding: var(--gap);}
+	.pad-m {padding: var(--gap-m);}
+	.pad-l {padding: var(--gap-l);}
+	.pad-xl {padding: var(--gap-xl);}
+	.pad-y-xs {padding-block: var(--gap-xs);}
+	.pad-y-s {padding-block: var(--gap-s);}
+	.pad-y {padding-block: var(--gap);}
+	.pad-y-m {padding-block: var(--gap-m);}
+	.pad-y-l {padding-block: var(--gap-l);}
+	.pad-y-xl {padding-block: var(--gap-xl);}
+	.pad-x-xs {padding-inline: var(--gap-xs);}
+	.pad-x-s {padding-inline: var(--gap-s);}
+	.pad-x {padding-inline: var(--gap);}
+	.pad-x-m {padding-inline: var(--gap-m);}
+	.pad-x-l {padding-inline: var(--gap-l);}
+	.pad-x-xl {padding-inline: var(--gap-xl);}
+}
+
+/* Margin - Expand to see classes*/
+@media (min-width: 1px) {
+	.margin-xs {margin: var(--gap-xs);}
+	.margin-s {margin: var(--gap-s);}
+	.margin {margin: var(--gap);}
+	.margin-m {margin: var(--gap-m);}
+	.margin-l {margin: var(--gap-l);}
+	.margin-xl {margin: var(--gap-xl);}
+	.margin-y-xs {margin-block: var(--gap-xs);}
+	.margin-y-s {margin-block: var(--gap-s);}
+	.margin-y {margin-block: var(--gap);}
+	.margin-y-m {margin-block: var(--gap-m);}
+	.margin-y-l {margin-block: var(--gap-l);}
+	.margin-y-xl {margin-block: var(--gap-xl);}
+	.margin-x-xs {margin-inline: var(--gap-xs);}
+	.margin-x-s {margin-inline: var(--gap-s);}
+	.margin-x {margin-inline: var(--gap);}
+	.margin-x-m {margin-inline: var(--gap-m);}
+	.margin-x-l {margin-inline: var(--gap-l);}
+	.margin-x-xl {margin-inline: var(--gap-xl);}
+}
+
+
+
+
+
+
+
+
+
+/* Screen Reader
+*	Improved screen reader only CSS class
+@author Gaël Poupard
+@note Based on Yahoo!'s technique
+@author Thierry Koblentz
+@see https://www.cssmojo.com/hide-content-from-sighted-users/
+* 1.
+@note `clip` is deprecated but works everywhere
+@see https://developer.mozilla.org/en-US/docs/Web/CSS/clip
+* 2.
+@note `clip-path` is the future-proof version, but not very well supported yet
+@see https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path
+@see http://caniuse.com/#search=clip-path
+@author Yvain Liechti
+@see https://twitter.com/ryuran78/status/778943389819604992
+* 3.
+@note preventing text to be condensed
+author J. Renée Beach
+@see https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+@note Drupal 8 goes with word-wrap: normal instead
+@see https://www.drupal.org/node/2045151
+@see http://cgit.drupalcode.org/drupal/commit/?id=5b847ea
+* 4.
+@note !important is important
+@note Obviously you wanna hide something
+@author Harry Roberts
+@see https://csswizardry.com/2016/05/the-importance-of-important/
+*/
+
+.sr-only {
+	border: 0 !important;
+	clip: rect(1px, 1px, 1px, 1px) !important; /* 1 */
+	-webkit-clip-path: inset(50%) !important;
+	clip-path: inset(50%) !important;  /* 2 */
+	height: 1px !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	position: absolute !important;
+	width: 1px !important;
+	white-space: nowrap !important;            /* 3 */
+}
+
+/*
+Use in conjunction with .sr-only to only display content when it's focused.
+@note Useful for skip links 
+@see http://www.w3.org/TR/2013/NOTE-WCAG20-TECHS-20130905/G1
+@note Based on a HTML5 Boilerplate technique, included in Bootstrap
+@note Fixed a bug with position: static on iOS 10.0.2 + VoiceOver
+@author Sylvain Pigeard
+@see https://github.com/twbs/bootstrap/issues/20732
+*/
+.sr-only-focusable:focus,
+.sr-only-focusable:active {
+	clip: auto !important;
+	-webkit-clip-path: none !important;
+	clip-path: none !important;
+	height: auto !important;
+	margin: auto !important;
+	overflow: visible !important;
+	width: auto !important;
+	white-space: normal !important;
+}
+
+
+/* Debug */
+
+.debug * {
+	padding: 2px;
+	background-color: rgba(0,70,70,.05);
+	mix-blend-mode: multiply;
+	outline: 1px dashed rgba(0,20,20,.15);
+}
+
+.debug-2 :before {
+  position: absolute;
+	top: 0;
+	left: 0;
+	font-family: var(--monospace);
+	font-size: .5rem;
+	border: 1px solid #ccc;
+	color: white;
+	background: var(--clr-text);
+}
+
+.debug-2 * {
+	padding: .5rem;
+	background-color: rgba(0,70,70,.05);
+	mix-blend-mode: multiply;
+	outline: 1px dashed rgba(0,20,20,.15);
+}
+
+.debug-2 *:before {
+	content: "Level 1";
+}
+
+.debug-2 * > * {
+  position: relative;
+	background-color: rgba(0,50,50,.08);
+	outline: 1px dashed rgba(0,50,0,.15);
+}
+.debug-2 * > *:before {
+  content: "Level 2";
+}
+.debug-2 * > * > * {
+  position: relative;
+	background-color: rgba(40,10,40,.1);
+	outline: 1px dashed rgba(40,0,0,.25);
+}
+.debug-2 * > * > *:before {
+  content: "Level 3";
+}
+
+.debug-3 * {
+	position: relative;
+}
+
+.debug-3 *:before {
+  content: '';
+	position: absolute;
+  inset: 0;
+	outline: 1px dashed rgba(0,20,20,.15);
+	background-color: rgba(0,70,70,.05);
+	mix-blend-mode: multiply;
+}
+
