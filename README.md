@@ -26,7 +26,7 @@ It only contains the following:
 1. Download VSCode
 2. Install the HubSpot CLI extension
 3. Make a root folder and drop this repo into that folder.
-4. Open the VSCode terminal and run `hs init`, then follow the instructions.
+4. Open the VSCode terminal and run `hs init`, then follow the instructions. You'll see a `hubspot.config.yml` file alongside your `skeleton-theme` repo. DO NOT UPLOAD the yaml file.
 5. Run `hs upload skeleton-theme skeleton-theme` to upload the theme to your HubSpot account/
 
 ### Important
