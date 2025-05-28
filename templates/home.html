@@ -1,0 +1,36 @@
+<!-- 
+label: Home
+templateType: page
+isAvailableForNewContent: true
+screenshotPath: ../images/template-previews/home.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+
+    {% dnd_area "dnd_area"
+      label="Main section"
+    %}
+
+{% dnd_section %}
+  {% dnd_column %}
+    {% dnd_row %}
+      {% dnd_module "module_12107517782" path="../modules/Hello World", label="Hello World" %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+ {% end_dnd_column %}
+
+{% dnd_section %}
+  {% dnd_column %}
+    {% dnd_row %}
+      {% dnd_module "module_16987065767921" path="@hubspot/rich_text", label="rich_text.module" %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+ {% end_dnd_column %}
+		
+{% end_dnd_section %}
+
+{% end_dnd_area %}
+
+
+{% endblock body %}

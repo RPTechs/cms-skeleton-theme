@@ -1,0 +1,17 @@
+{% if theme.options.darken_backgrounds %}
+    [class*="-background-image"] {
+        position: relative; /* Clips content in container */
+    }
+    
+    [class*="-background-image"]::before {
+    content: ''; /* Allows ::before to become an empty div */
+    position: absolute; /* Lets you position it */
+    inset: 0;   /* Shorthand for top:0; bottom:0; left:0; right:0; */
+    background-color: rgba(0,0,0,.{{theme.options.darken_background_amount}}); /* Black color and opacity is in theme settings */
+    backdrop-filter: multiply; /* Magic dust */
+    }
+    
+    [class*="-background-image"] > * {
+        position: relative; /* Prevents other elements in container from being darkened */
+    }
+{% endif %}

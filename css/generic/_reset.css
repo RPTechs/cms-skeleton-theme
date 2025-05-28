@@ -1,0 +1,33 @@
+/******************************************/
+/*********** generic/_reset.css ***********/
+/******************************************/
+
+/* Reset */
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+	font-family: inherit;
+}
+
+html {
+  margin: 0;
+}
+
+
+body {
+	min-height: 100vh; /* Prevent  */
+  font-size: 14px; /* Set rem size */
+}
+
+/* Makes graphics responsive  */
+img, picture, svg, video {
+	display:block;
+	max-width:100%;
+}
+
+input, textarea, button, select {
+	font: inherit;
+}

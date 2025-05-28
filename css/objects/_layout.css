@@ -1,0 +1,84 @@
+/******************************************/
+/*********** objects/_layout.css **********/
+/******************************************/
+
+/* HubL Variables */
+
+{% set total_columns_count = 12 %}
+
+    /* 1a. Containers */
+        
+    {% set container_width = theme.spacing.maximum_content_width ~ 'px' %}
+    {% set dnd_section_padding = theme.spacing.vertical_spacing ~ 'px ' ~ '1rem' %}
+    
+    
+    
+    
+    /* CSS variables */
+    
+    :root {
+      --column-gap: 2.13%;
+      --column-width-multiplier: 8.333;
+      --dnd-section-vertical-padding: 20px; /* DND sections */
+      --max-width: {{ theme.spacing.maximum_content_width }}px;
+      --padding-inline: 2rem; /* Sets left/right padding for dnd containers */
+      /* If you don't see a max width on drag and drop sections, set them in the editor or template code. */
+    }
+    
+    
+    
+    /* Full width sections */
+    .dnd-section {
+      padding-inline: var(--padding-inline);
+      padding-block: var(--dnd-section-vertical-padding);
+    }
+    
+    .dnd-section > .row-fluid {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: {{ container_width }};
+    }
+    
+    /* For non-drag-and-drop templates */
+    .content-wrapper {
+      max-width: {{ container_width }};
+    }
+    .dnd-section
+    .content-wrapper--vertical-spacing {
+      padding: {{ dnd_section_padding }};
+    }
+    
+    
+    
+    
+    /* Mobile layout */
+    
+    .row-fluid {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+    
+    {% for span_num in range(1, total_columns_count + 1) %}
+      {{ ".row-fluid .span" ~ span_num }}{{ loop.last ? null : "," }}
+    {%- endfor -%} {
+      min-height: 1px;
+      width: 100%;
+    }
+    
+    /* Desktop layout */
+    
+    @media (min-width: 768px) {
+      .row-fluid {
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+      }
+    
+      {% for span_num in range(1, total_columns_count) %}
+        {{ ".row-fluid .span" ~ span_num }} {
+          width: calc(var(--column-width-multiplier) * 1% * {{ span_num  }} - var(--column-gap) * ({{ total_columns_count - span_num }} * var(--column-width-multiplier) / 100));
+        }
+      {% endfor %}
+    }
+    
+    

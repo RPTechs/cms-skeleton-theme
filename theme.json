@@ -1,0 +1,30 @@
+{
+    "label" : "HubSpot Skeleton",
+    "preview_path" : "./templates/home.html",
+    "screenshot_path" : "./images/template-previews/home.png",
+    "enable_domain_stylesheets" : false,
+    "is_available_for_new_content" : true,
+    "author" : {
+      "name" : "Sasha Sosin",
+      "email" : "sashavsosin@gmail.com"
+    },
+    "developer" : {
+      "developer" : "Sasha Sosin",
+      "developer_email" : "sashavsosin@gmail.com"
+    },
+    "hide_all_default_modules" : false,
+    "responsive_breakpoints": [
+      {
+        "name": "mobile",
+        "mediaQuery": "@media (max-width: 767px)",
+        "previewWidth": {
+          "value": 477
+        }
+      }
+    ],
+      "custom_fonts": [ "./fonts/font_1", ".fonts/font_2", "./fonts/Montserrat" ],
+      "hidden_modules": [
+          "@hubspot/builtinmodule"
+      ]
+  }
+  

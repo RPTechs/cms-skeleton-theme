@@ -1,0 +1,32 @@
+/******************************************/
+/*******  utilities/_variables.css  *******/
+/******************************************/
+
+:root {
+
+    /* Colors */
+
+    --clr-primary: {{ theme.global_colors.primary.rgba }};
+    --clr-secondary: {{ theme.global_colors.secondary.rgba }};
+    --clr-text: {{ theme.global_colors.text.rgba }};
+    --clr-bg: {{theme.global_colors.bg.rgba}};
+    --clr-bg-secondary: {{ theme.global_colors.bg_secondary.rgba }};
+    --clr-action: {{ theme.global_colors.action.rgba }};
+
+
+    /* Typography */
+    --font-primary: {{ theme.global_fonts.primary.font }};
+    --font-secondary: {{ theme.global_fonts.secondary.font }};
+    --font-body: {{theme.global_fonts.body_font.font }};
+
+    /* Spacing */
+    --margin-block: 1rem; /* Vertical margins */
+    --margin-inline: 1rem; /* Side margins */
+    --padding-block: 2rem; /* Vertical paddings */
+    --padding-inline: 1rem; /* Side paddings */
+
+    --max-width: 1170px; /* Width of main page content */
+
+
+} 
+

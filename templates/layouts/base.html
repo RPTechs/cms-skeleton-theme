@@ -1,0 +1,61 @@
+<!--
+    templateType: 'none'
+    isAvailableForNewContent: false
+-->
+<!doctype html>
+<html lang="{{ html_lang }}" {{ html_lang_dir }}>
+  <head>
+    <meta charset="utf-8">
+    {% if page_meta.html_title or pageTitle %}<title>{{ page_meta.html_title or pageTitle }}</title>{% endif %}
+    {% if brand_settings.primaryFavicon.src %}<link rel="shortcut icon" href="{{ brand_settings.primaryFavicon.src }}" />{% endif %}
+    <meta name="description" content="{{ page_meta.meta_description }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {# {{ require_css(get_asset_url("../../css/main.css")) }} #}
+    {# This is intended to be used if a template requires template specific style sheets #}
+    
+		{# Font awesome #}
+    <script src="https://kit.fontawesome.com/xxxxxxxxxx.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    {% if template_css %}
+      {{ require_css(get_asset_url(template_css)) }}
+    {% endif %}
+    
+    {# {{ require_css(get_asset_url("../../css/theme-overrides.css")) }} #}
+		
+    {# Animate on Scroll: https://github.com/michalsnik/aos #}
+		{% if not is_in_editor %}
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+		{% endif %}
+		{# End Animate on Scroll #}
+		
+    {# To see a full list of what is included via standard_header_includes please reference this article: https://developers.hubspot.com/docs/cms/hubl/variables#required-page-template-variables #}
+    {{ standard_header_includes }}
+  </head>
+  <body>
+   
+<div data-aos="fade-right">
+<h1>
+Every Moment is New
+</h1>
+</div>
+
+  <main id="main-content" class="body-container-wrapper">
+        {% block body %}
+        {% endblock body %}
+      </main>
+
+    {{ standard_footer_includes }}
+		
+		{# Animate on Scroll: https://github.com/michalsnik/aos 
+      # Used in muptiple modules #}
+    {% if not is_in_editor %}
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+		{% endif %}
+		{# End Animate on Scroll #}
+  </body>
+</html>
+

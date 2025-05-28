@@ -1,0 +1,15 @@
+{% include '../utilities/_variables.css' %}
+
+
+    .content-wrapper {
+        margin: 0 auto;
+    }
+    
+    .error-page, .systems-page {
+        display: grid;
+        place-items: center;
+        margin: 90px 1rem;
+        max-width: var(--max-width);
+    
+    }
+    

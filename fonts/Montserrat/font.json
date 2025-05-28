@@ -1,0 +1,55 @@
+{
+    "name": "Montserrat",
+    "default": "Regular",
+    "fallback": "arial, sans-serif",
+    "variants": [
+      { "name": "Regular",
+        "files": [
+                    {
+            "file": "https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2",
+            "format": "woff2"
+          }
+        ],
+        "styles": {
+          "font-weight": 400,
+          "font-style": "normal"
+        }
+      },
+      { "name": "Bold",
+        "files": [
+                    {
+            "file": "https://fonts.gstatic.com/s/montserrat/v26/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2",
+            "format": "woff2"
+          }
+        ],
+        "styles": {
+          "font-weight": 700,
+          "font-style": "normal"
+        }
+      },
+      { "name": "Italic",
+        "files": [
+                    {
+            "file": "https://fonts.gstatic.com/s/montserrat/v26/JTUQjIg1_i6t8kCHKm459WxRyS7m0dR9pA.woff2",
+            "format": "woff2"
+          }
+        ],
+        "styles": {
+          "font-weight": 400,
+          "font-style": "italic"
+        }
+      },
+      { "name": "Bold Italic",
+        "files": [
+                    {
+            "file": "https://fonts.gstatic.com/s/montserrat/v26/JTUQjIg1_i6t8kCHKm459WxRyS7m0dR9pA.woff2",
+            "format": "woff2"
+          }
+        ],
+        "styles": {
+          "font-weight": 700,
+          "font-style": "italic"
+        }
+      }
+    ]
+  }

@@ -1,0 +1,12 @@
+/* Sets scroll properties for anchor tags */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+a[data-hs-anchor="true"] { 
+    margin-top: -100px; 
+    position: absolute;
+}

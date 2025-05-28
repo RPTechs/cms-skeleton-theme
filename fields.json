@@ -1,0 +1,233 @@
+[
+    {
+      "label": "Global colors",
+      "name": "global_colors",
+      "type": "group",
+      "children": [
+        {
+          "label": "Primary",
+          "name": "primary",
+          "type": "color",
+          "visibility": {
+            "hidden_subfields": {
+              "opacity": true
+            }
+          },
+          "inherited_value": {
+            "property_value_paths": {
+              "color": "brand_settings.primaryColor"
+            }
+          },
+          "default": {
+            "color": "#a69f8b"
+          }
+        },
+        {
+          "label": "Secondary",
+          "name": "secondary",
+          "type": "color",
+          "visibility": {
+            "hidden_subfields": {
+              "opacity": true
+            }
+          },
+          "inherited_value": {
+            "property_value_paths": {
+              "color": "brand_settings.colors[1]"
+            }
+          },
+          "default": {
+            "color": "#464443"
+          }
+        },
+        {
+          "label": "Text Color",
+          "name": "text",
+          "type": "color",
+          "visibility": {
+            "hidden_subfields": {
+              "opacity": true
+            }
+          },
+          "inherited_value": {
+            "property_value_paths": {
+              "color": "brand_settings.colors[2]"
+            }
+          },
+          "default": {
+            "color": "#201f1e"
+          }
+        },
+        {
+          "label": "Background Color",
+          "name": "bg",
+          "type": "color",
+          "visibility": {
+            "hidden_subfields": {
+              "opacity": true
+            }
+          },
+            "default": {
+            "color": "#FFFFFF"
+          }
+        },
+        {
+          "label": "Secondary Background",
+          "name": "bg_secondary",
+          "type": "color",
+          "visibility": {
+            "hidden_subfields": {
+              "opacity": true
+            }
+          },
+          "inherited_value": {
+            "property_value_paths": {
+              "color": "brand_settings.colors[3]"
+            }
+          },
+          "default": {
+            "color": "#f2f2f2"
+          }
+        },
+        {
+          "label": "Action Color",
+          "name": "action",
+          "type": "color",
+          "visibility": {
+            "hidden_subfields": {
+              "opacity": true
+            }
+          },
+          "inherited_value": {
+            "property_value_paths": {
+              "color": "brand_settings.colors[4]"
+            }
+          },
+          "default": {
+            "color": "#8b0000"
+          }
+        }
+  
+      ]
+    },
+    {
+      "label": "Global fonts",
+      "name": "global_fonts",
+      "type": "group",
+      "children": [
+        {
+          "label": "Primary",
+          "name": "primary",
+          "type": "font",
+          "visibility": {
+            "hidden_subfields": {
+              "size": true,
+              "styles": true
+            }
+          },
+          "inherited_value": {
+            "property_value_paths": {
+              "color": "theme.global_colors.primary.color"
+            }
+          },
+          "default": {
+            "fallback": "sans-serif",
+            "font": "Dosis",
+            "font_set": "GOOGLE"
+          }
+        },
+        {
+          "label": "Secondary",
+          "name": "secondary",
+          "type": "font",
+          "visibility": {
+            "hidden_subfields": {
+              "size": true,
+              "styles": true
+            }
+          },
+          "inherited_value": {
+            "property_value_paths": {
+              "color": "theme.global_colors.primary.color"
+            }
+          },
+          "default": {
+            "fallback": "sans-serif",
+            "font": "Montserrat",
+            "font_set": "GOOGLE"
+          }
+        },
+        {
+          "label": "Body",
+          "name": "body_font",
+          "type": "font",
+          "visibility": {
+            "hidden_subfields": {
+              "size": true,
+              "styles": true
+            }
+          },
+          "inherited_value": {
+            "property_value_paths": {
+              "color": "theme.global_colors.secondary.color"
+            }
+          },
+          "default": {
+            "fallback": "sans-serif",
+            "font": "Open Sans",
+            "font_set": "GOOGLE"
+          }
+        }
+      ]
+    },
+    {
+      "label": "Spacing",
+      "name": "spacing",
+      "type": "group",
+      "children": [
+        {
+          "label": "Vertical spacing",
+          "name": "vertical_spacing",
+          "type": "number",
+          "display": "slider",
+          "max": 500,
+          "min": 0,
+          "suffix": "px",
+          "default": 0
+        },
+        {
+          "label": "Maximum content width",
+          "name": "maximum_content_width",
+          "type": "number",
+          "display": "slider",
+          "max": 2500,
+          "min": 900,
+          "suffix": "px",
+          "default": 1170
+        }
+      ]
+    },
+    {
+      "label": "Options",
+      "name": "options",
+      "type": "group",
+      "children": [
+        {
+          "label": "Darken Section Image Backgrounds",
+          "name": "darken_backgrounds",
+          "type": "boolean",
+          "default": true,
+          "display": "toggle"
+        },
+        {
+          "label": "Amount",
+          "name": "darken_background_amount",
+          "type": "number",
+          "max": 100,
+          "min": 0,
+          "suffix": "%",
+          "default": 40
+        }
+      ]
+    }
+  ]
